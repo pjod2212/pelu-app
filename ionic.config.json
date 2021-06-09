@@ -1,0 +1,8 @@
+{
+  "name": "peluApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "db9d7780"
+}
