@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="miscolores">
+    <ion-title color="miscolores">Sucursal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="miscolores">
+  
+  <ion-label > Elije la sucursal a la que deseas concurrir </ion-label>
+
+    <ion-card button="true"  *ngFor="let peluqueria of listadoPeluquerias" (click)="seleccionarPeluqueria(peluqueria)" >
+      <ion-card-header>
+        <ion-card-subtitle>Peluqueria {{peluqueria.idPeluqueria}}</ion-card-subtitle>
+        <ion-card-title>{{peluqueria.nombre}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content >
+       La dirección es {{peluqueria.direccion}}
+      </ion-card-content>
+    </ion-card>    
+  
+</ion-content>

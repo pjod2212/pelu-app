@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="miscolores">
+    <ion-title color="miscolores">Peluquero</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="miscolores">
+  
+  <ion-label > Elije al profesional que deseas que te atienda </ion-label>
+
+    <ion-card button="true"  *ngFor="let peluquero of peluqueroList" (click)="seleccionarPeluquero(peluquero)" >
+      <ion-card-header>
+        <ion-card-subtitle>Peluquero {{peluquero.idPeluquero}}</ion-card-subtitle>
+        <ion-card-title>{{peluquero.nombreApellido}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content >
+       El email es  <ion-label color="primary">{{peluquero.email}}</ion-label>
+      </ion-card-content>
+    </ion-card>    
+  
+</ion-content>
