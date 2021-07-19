@@ -1,7 +1,10 @@
 {
   "name": "peluApp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular",
   "id": "db9d7780"

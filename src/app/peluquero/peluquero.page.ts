@@ -9,7 +9,9 @@ import { NavigationExtras,ActivatedRoute, Router } from '@angular/router';
 export class PeluqueroPage implements OnInit {
 
   peluqueroList:any;
-
+  listadoPeluquerias : any;
+  servicioSeleccionado : any;
+  
   constructor(private route: ActivatedRoute, 
     private router: Router) { 
 
@@ -23,11 +25,29 @@ export class PeluqueroPage implements OnInit {
       } catch (error) {
         console.log("ERROR --> " + error);
       }
-  
-
+      
     }
 
   ngOnInit() {
   }
 
+  seleccionarPeluquero(peluquero:any){
+    let navigationExtras: NavigationExtras;
+    
+    navigationExtras = {
+      state: {
+        cliente: 'aca va el objeto cliente falta crearlo',
+        servicio: this.servicioSeleccionado,
+        peluqueria: peluquero
+      }
+
+    };
+
+    this.router.navigate(['/tabs/turno'],navigationExtras);
+
+  }
+ 
+
+  
+  
 }

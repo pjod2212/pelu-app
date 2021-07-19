@@ -28,6 +28,10 @@ const routes: Routes = [
         loadChildren: () => import('../peluquero/peluquero.module').then(m => m.PeluqueroPageModule)
       },
       {
+        path: 'turno',
+        loadChildren: () => import('../turno/turno.module').then( m => m.TurnoPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

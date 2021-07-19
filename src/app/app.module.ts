@@ -7,12 +7,12 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgCalendarModule  } from 'ionic2-calendar';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
-  providers: [HttpClientModule,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [HttpClientModule,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },NgCalendarModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

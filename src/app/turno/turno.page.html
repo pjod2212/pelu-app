@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="miscolores">
+    <ion-title color="miscolores">Turno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header >
+  <ion-navbar  >
+      <ion-title>{{viewTitle}}</ion-title>
+      <ion-buttons end>
+          <button ion-button [disabled]="isToday" (click)="today()">Today</button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+    <calendar
+    [eventSource]="eventSource"
+    [calendarMode]="calendar.mode"
+    [currentDate]="calendar.currentDate"
+    (onEventSelected)="onEventSelected($event)"
+    (onTimeSelected)="onTimeSelected($event)"
+    (onTitleChanged)="onViewTitleChanged($event)"
+    (onCurrentDateChanged)="onCurrentDateChanged($event)"
+    >
+    </calendar>
+</ion-content>
