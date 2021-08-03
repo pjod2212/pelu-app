@@ -7,11 +7,11 @@ export const environment = {
   envName: 'local',
 
   //Config base.
-  serverUrl: 'https://cors-anywhere.herokuapp.com/https://app-gestionturnospeluqueria.herokuapp.com/',
-  
+  serverUrlExterno: 'https://cors-anywhere.herokuapp.com/https://app-gestionturnospeluqueria.herokuapp.com/',
+  serverUrl: '/peluqueria-api',
   //Enpoints
-  servicioEndpoint: 'peluquero/servicios',
-  peluqueriaEndpoint: 'peluqueria/peluquerias',
+  servicioEndpoint: '/servicio/servicios',
+  peluqueriaEndpoint: '/peluqueria/peluquerias',
   //entregasEndpoint: '/entregas',
   //cotizacionEndpoint: '/cotizacion',
   //tipoDeCambioEndpoint: '/tipoCambio',
